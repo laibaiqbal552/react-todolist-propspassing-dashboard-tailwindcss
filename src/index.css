@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.main-container {
+  @apply mx-auto max-w-7xl;
+}
+
+.prev {
+  @apply left-0;
+}
+.next {
+  @apply right-0;
+}
+.icon {
+  @apply transition-all ease-linear duration-300 translate-y-[-50%] w-8 h-8 md:text-2xl rounded-md cursor-pointer absolute top-[200px] border-transparent text-base grid place-items-center text-white bg-gray-500;
+}
+article {
+  @apply absolute top-0 left-0 w-full h-full transition-all duration-300 ease-linear opacity-0;
+}
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+article.lastSlide {
+  transform: translateX(-100%);
+}
+article.nextSlide {
+  transform: translateX(100%);
+}
+.alert {
+  margin-bottom: 1rem;
+  height: 1.25rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+}
+.alert-danger {
+  color: #721c24;
+  background: #f8d7da;
+}
+.alert-success {
+  color: #155724;
+  background: #d4edda;
+}
+
+/*
+=============== 
+Home
+===============
+*/
+
+.sidebar-toggle {
+  @apply fixed text-3xl transition-all duration-200 ease-in-out bg-transparent border-0 cursor-pointer top-8 left-12 animate-bounce;
+}
+
+.btn {
+  @apply inline-block px-4 py-1 m-2 text-lg text-white uppercase transition-all duration-300 ease-linear bg-black border-2 border-black rounded-sm cursor-pointer;
+}
+.btn:hover {
+  @apply text-black bg-transparent;
+}
+
+/*
+=============== 
+Modal
+===============
+*/
+.modal-overlay {
+  @apply fixed top-0 left-0 w-full h-full bg-black opacity-50 grid place-items-center invisible -z-[1] transition-all ease-linear duration-300;
+}
+/* OPEN/CLOSE MODAL */
+.show-modal {
+  @apply z-10 visible;
+}
+.modal-container {
+  @apply bg-white rounded-sm w-[90vw] h-[30vh] max-w-[620px] text-center grid relative place-items-center;
+}
+.close-modal-btn {
+  @apply absolute text-3xl text-red-800 bg-transparent border-0 cursor-pointer top-4 right-4;
+}
+/* sub menu */
+.submenu::before {
+  @apply content-none block w-0 absolute -top-[5px] left-[50%] -translate-x-[50%] h-0 border-b-[5px] border-l-[5px] border-r-[5px] border-l-transparent border-r-transparent border-b-white;
+}
+
+/*
+=============== 
+Cart Item
+===============
+*/
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* cooctails project */
+
+/* 
+====== 
+Cocktails List 
+======
+*/
+.cocktails-center {
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  /* align-items: start; */
+}
+@media screen and (min-width: 576px) {
+  .cocktails-center {
+    grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
+  }
+}
+/* 
+====== 
+Cocktail 
+======
+*/
+.cocktail {
+  @apply grid mb-8 transition-all duration-300 ease-linear bg-white rounded-sm;
+
+  grid-template-rows: auto 1fr;
+}
+.cocktail:hover {
+  box-shadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+====== 
+Form
+======
+*/
+
+.search-form {
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+====== 
+Cocktail
+======
+*/
+
+@media screen and (min-width: 992px) {
+  .drink {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 3rem;
+    align-items: center;
+  }
+}
