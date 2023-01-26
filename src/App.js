@@ -5,7 +5,7 @@ import Add from "./components/screens/Add";
 import Edit from "./components/screens/Edit";
 import Delete from "./components/screens/Delete";
 import Layout from "./components/Layout";
-import { GlobalProvider } from "./context/GlobalState";
+// import { GlobalProvider } from "./context/GlobalState";
 function App() {
   const [data, setData] = useState({
     name: "",
@@ -70,9 +70,9 @@ function App() {
       email: "",
     });
   };
-  const Handleclear = () => {
-    setList([]);
-  };
+  // const Handleclear = () => {
+  //   setList([]);
+  // };
   useEffect(() => {
     console.log(list, "@list data");
   }, [list]);
