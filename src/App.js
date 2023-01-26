@@ -17,17 +17,18 @@ function App() {
   // const imageRef = useRef(null);
 
   const InputTargetValues = (e) => {
-    if (e.target.type === "file") {
-      setData({
-        ...data,
-        [e.target.name]: {
-          url: createImgUrl(e.target.files[0]),
-          file: e.target.files[0],
-        },
-      });
-    } else {
-      setData({ ...data, [e.target.name]: e.target.value });
-    }
+    // if (e.target.type === "file") {
+    //   setData({
+    //     ...data,
+    //     [e.target.name]: {
+    //       url: createImgUrl(e.target.files[0]),
+    //       file: e.target.files[0],
+    //     },
+    //   });
+    // } else {
+    //   setData({ ...data, [e.target.name]: e.target.value });
+    // }
+    setData({ ...data, [e.target.name]: e.target.value });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
