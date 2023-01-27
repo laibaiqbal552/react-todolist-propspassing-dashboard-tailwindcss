@@ -4,7 +4,7 @@ const Edit = ({
   handleSubmit,
   InputTargetValues,
   data,
-  list,
+  // list,
   handleUpdate,
   imageRef,
 }) => {
