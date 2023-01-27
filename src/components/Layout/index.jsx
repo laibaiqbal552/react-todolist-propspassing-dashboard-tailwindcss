@@ -19,13 +19,13 @@ const navigation = [
     icon: FaProductHunt,
     current: false,
   },
-  { name: "EditProduct", href: "/edit", icon: FaEdit, current: false },
-  {
-    name: "DeleteProduct",
-    href: "/delete",
-    icon: FaTrash,
-    current: false,
-  },
+  // { name: "EditProduct", href: "/edit", icon: FaEdit, current: false },
+  // {
+  //   name: "DeleteProduct",
+  //   href: "/delete",
+  //   icon: FaTrash,
+  //   current: false,
+  // },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
