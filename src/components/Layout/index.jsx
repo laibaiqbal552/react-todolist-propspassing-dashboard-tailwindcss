@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
-  FaBeer,
+  FaBars,
   FaSearch,
   FaRegBell,
   FaHome,
@@ -96,7 +96,7 @@ export default function Layout({ children }) {
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className="sr-only">Close sidebar</span>
-                        <FaBeer
+                        <FaBars
                           className="w-6 h-6 text-white"
                           aria-hidden="true"
                         />
@@ -194,7 +194,7 @@ export default function Layout({ children }) {
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
-              <FaBeer className="w-6 h-6" aria-hidden="true" />
+              <FaBars className="w-6 h-6" aria-hidden="true" />
             </button>
             <div className="flex justify-between flex-1 px-4">
               <div className="flex flex-1">
