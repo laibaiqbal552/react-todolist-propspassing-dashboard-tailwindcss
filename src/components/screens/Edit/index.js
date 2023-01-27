@@ -44,13 +44,28 @@ const Edit = ({
           onChange={InputTargetValues}
         />
 
-        <button
-          type="button"
-          onClick={() => imageRef && imageRef.current.click()}
-          className="inline-flex items-center p-3 text-white bg-indigo-600 border border-transparent rounded-full shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >
-          <PlusIconOutline className="w-6 h-6" aria-hidden="true" />
-        </button>
+        <div className="relative w-14 h-14">
+          <button
+            type="button"
+            onClick={() => imageRef && imageRef.current.click()}
+            className={`${
+              data.image.file
+                ? "bg-transparent"
+                : "bg-indigo-600 focus:ring-indigo-500 focus:outline-none focus:ring-2  focus:ring-offset-2"
+            }  inline-flex items-center p-3 mx-auto w-full text-black font-bold  border border-transparent rounded-full shadow-sm  `}
+          >
+            <PlusIconOutline className="w-8 h-8 m-auto" aria-hidden="true" />
+          </button>
+          <img
+            src={data.image.url}
+            alt=""
+            className={`${
+              data.image.file
+                ? "absolute top-0 left-0 right-0 -z-[1]"
+                : "hidden"
+            } rounded-full w-14 h-14 `}
+          />
+        </div>
 
         <div className="flex justify-center gap-6">
           <button
