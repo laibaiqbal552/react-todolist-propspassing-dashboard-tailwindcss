@@ -55,8 +55,8 @@ function App() {
     const newList = list.filter((i) => i.id !== id);
     setList(newList);
   };
-  const HandleEdit = (id, name, secondName, email) => {
-    setData({ name, secondName, email });
+  const HandleEdit = (id, name, secondName, email, image) => {
+    setData({ name, secondName, email, image });
     setEntryId(id);
   };
   const handleUpdate = () => {
