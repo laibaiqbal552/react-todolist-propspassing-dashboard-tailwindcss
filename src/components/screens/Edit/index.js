@@ -1,11 +1,12 @@
 import React from "react";
-
+import { PlusIcon as PlusIconOutline } from "@heroicons/react/24/outline";
 const Edit = ({
   handleSubmit,
   InputTargetValues,
   data,
   list,
   handleUpdate,
+  imageRef,
 }) => {
   return (
     <div>
@@ -34,6 +35,22 @@ const Edit = ({
           value={data.email}
           onChange={InputTargetValues}
         />
+        <input
+          type="file"
+          placeholder="type here..."
+          className="hidden w-full px-1 py-2 mb-4 border border-indigo-500 focus:outline-none"
+          name="image"
+          ref={imageRef}
+          onChange={InputTargetValues}
+        />
+
+        <button
+          type="button"
+          onClick={() => imageRef && imageRef.current.click()}
+          className="inline-flex items-center p-3 text-white bg-indigo-600 border border-transparent rounded-full shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        >
+          <PlusIconOutline className="w-6 h-6" aria-hidden="true" />
+        </button>
 
         <div className="flex justify-center gap-6">
           {/* <button

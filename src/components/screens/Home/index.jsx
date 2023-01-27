@@ -14,7 +14,7 @@ const Home = ({ list, HandleEdit, HandleDelete }) => {
         </button>
       </Link>
       <div>
-        {list.map(({ id, name, secondName, email }) => {
+        {list.map(({ id, name, secondName, email, image }) => {
           return (
             <div
               key={id}
@@ -24,13 +24,18 @@ const Home = ({ list, HandleEdit, HandleDelete }) => {
                 <p>name:{name}</p>
                 <p>secondname:{secondName}</p>
                 <p>email: {email}</p>
+                <div>
+                  <img src={image.url} alt={name} />
+                </div>
               </div>
               <div className="flex justify-end gap-6">
                 <Link to={`/edit/${id}`}>
                   <button
                     type="button"
                     className="px-2 py-1 text-xl font-bold text-white bg-indigo-500 "
-                    onClick={() => HandleEdit(id, name, secondName, email)}
+                    onClick={() =>
+                      HandleEdit(id, name, secondName, email, image)
+                    }
                   >
                     edit
                   </button>
