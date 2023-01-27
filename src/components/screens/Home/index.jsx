@@ -25,7 +25,11 @@ const Home = ({ list, HandleEdit, HandleDelete }) => {
                 <p>secondname:{secondName}</p>
                 <p>email: {email}</p>
                 <div>
-                  <img src={image.url} alt={name} />
+                  <img
+                    src={image.url}
+                    alt={name}
+                    className={`${image.url ? "w-48 h-48" : "w-auto h-auto"}`}
+                  />
                 </div>
               </div>
               <div className="flex justify-end gap-6">

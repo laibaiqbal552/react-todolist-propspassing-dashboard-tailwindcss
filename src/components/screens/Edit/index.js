@@ -53,13 +53,6 @@ const Edit = ({
         </button>
 
         <div className="flex justify-center gap-6">
-          {/* <button
-            type="submit"
-            className="px-2 py-1 text-xl font-bold text-white bg-indigo-500 "
-          >
-            Add value
-          </button> */}
-
           <button
             type="button"
             onClick={handleUpdate}
@@ -69,22 +62,6 @@ const Edit = ({
           </button>
         </div>
       </form>
-      <div>
-        {list.map(({ id, name, secondName, email }) => {
-          return (
-            <div
-              key={id}
-              className="flex items-center justify-between p-2 my-2 border border-indigo-500"
-            >
-              <div className="flex flex-col">
-                <p>name:{name}</p>
-                <p>secondname:{secondName}</p>
-                <p>email: {email}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
     </div>
   );
 };

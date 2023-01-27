@@ -49,7 +49,7 @@ function App() {
       image: "",
     });
 
-    navigate("/");
+    // navigate("/");
   };
   const HandleDelete = (id) => {
     const newList = list.filter((i) => i.id !== id);
